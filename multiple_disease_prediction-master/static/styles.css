@@ -1,0 +1,100 @@
+/* Reset some default styles for consistency */
+body, h1, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body styling for background and general padding */
+body {
+    background: linear-gradient(135deg, rgba(113, 132, 230, 0.7), rgba(155, 89, 182, 0.7)),
+                url('../static/images/90f6ee4e-21ec-453a-a54c-cfd61f999feb.png'); /* Change this to your image path */
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container for the content */
+.container {
+    max-width: 700px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Main heading styling */
+h1 {
+    color: #333333;
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Navigation styling */
+nav {
+    margin-top: 30px;
+}
+
+/* Unordered list styling */
+ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* List item styling */
+li {
+    margin: 15px 0;
+}
+
+/* Anchor link styling */
+a {
+    color: #ffffff;
+    font-size: 20px;
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    border-radius: 25px;
+    transition: all 0.4s ease;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Hover effect for anchor links */
+a:hover {
+    background-color: #45a049;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 22px;
+    }
+    
+    a {
+        font-size: 18px;
+        padding: 12px 20px;
+    }
+}

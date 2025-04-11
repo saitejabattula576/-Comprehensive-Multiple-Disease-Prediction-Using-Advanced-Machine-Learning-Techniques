@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='heart_styles.css') }}">
+</head>
+<body>
+    <form method="POST">
+        <h1>Heart Disease Prediction using ML</h1>
+        <label>Age:</label>
+        <input type="text" name="age" required><br>
+        <label>Sex (0 = Female, 1 = Male):</label>
+        <input type="text" name="sex" required><br>
+        <label>Chest Pain types:</label>
+        <input type="text" name="cp" required><br>
+        <label>Resting Blood Pressure:</label>
+        <input type="text" name="trestbps" required><br>
+        <label>Serum Cholesterol in mg/dl:</label>
+        <input type="text" name="chol" required><br>
+        <label>Fasting Blood Sugar > 120 mg/dl (1 = True, 0 = False):</label>
+        <input type="text" name="fbs" required><br>
+        <label>Resting Electrocardiographic results (0, 1, 2):</label>
+        <input type="text" name="restecg" required><br>
+        <label>Maximum Heart Rate achieved:</label>
+        <input type="text" name="thalach" required><br>
+        <label>Exercise Induced Angina (1 = Yes, 0 = No):</label>
+        <input type="text" name="exang" required><br>
+        <label>ST depression induced by exercise relative to rest:</label>
+        <input type="text" name="oldpeak" required><br>
+        <label>Slope of the peak exercise ST segment (0, 1, 2):</label>
+        <input type="text" name="slope" required><br>
+        <label>Number of major vessels (0-3) colored by fluoroscopy:</label>
+        <input type="text" name="ca" required><br>
+        <label>Thalassemia (0 = Normal, 1 = Fixed defect, 2 = Reversible defect):</label>
+        <input type="text" name="thal" required><br><br>
+        <input type="submit" value="Heart Disease Test Result">
+    </form>
+
+    {% if diagnosis %}
+    <h2>{{ diagnosis }}</h2>
+    {% endif %}
+
+    <a href="/">Back to Home</a>
+</body>
+</html>

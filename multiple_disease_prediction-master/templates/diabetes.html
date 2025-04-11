@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='diabetes_styles.css') }}">
+</head>
+<body>
+    <form method="POST">
+        <h1>Diabetes Prediction using ML</h1>
+        <label>Number of Pregnancies:</label>
+        <input type="text" name="Pregnancies" required><br>
+        <label>Glucose Level:</label>
+        <input type="text" name="Glucose" required><br>
+        <label>Blood Pressure value:</label>
+        <input type="text" name="BloodPressure" required><br>
+        <label>Skin Thickness value:</label>
+        <input type="text" name="SkinThickness" required><br>
+        <label>Insulin Level:</label>
+        <input type="text" name="Insulin" required><br>
+        <label>BMI value:</label>
+        <input type="text" name="BMI" required><br>
+        <label>Diabetes Pedigree Function value:</label>
+        <input type="text" name="DiabetesPedigreeFunction" required><br>
+        <label>Age of the Person:</label>
+        <input type="text" name="Age" required><br><br>
+        <input type="submit" value="Diabetes Test Result">
+    </form>
+
+    {% if diagnosis %}
+    <h2>{{ diagnosis }}</h2>
+    {% endif %}
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>

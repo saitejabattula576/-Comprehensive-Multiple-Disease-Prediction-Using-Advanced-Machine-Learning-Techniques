@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liver Disease Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='liver_styles.css') }}">
+</head>
+<body>
+    <h1>Liver Disease Prediction using ML</h1>
+    <form method="POST">
+        <label for="Age">Age:</label>
+        <input type="text" id="Age" name="Age" required><br>
+        <label for="Gender">Gender (0 = Female, 1 = Male):</label>
+        <input type="text" id="Gender" name="Gender" required><br>
+        <label for="Total_Bilirubin">Total Bilirubin:</label>
+        <input type="text" id="Total_Bilirubin" name="Total_Bilirubin" required><br>
+        <label for="Direct_Bilirubin">Direct Bilirubin:</label>
+        <input type="text" id="Direct_Bilirubin" name="Direct_Bilirubin" required><br>
+        <label for="Alkaline_Phosphotase">Alkaline Phosphotase:</label>
+        <input type="text" id="Alkaline_Phosphotase" name="Alkaline_Phosphotase" required><br>
+        <label for="Alamine_Aminotransferase">Alamine Aminotransferase:</label>
+        <input type="text" id="Alamine_Aminotransferase" name="Alamine_Aminotransferase" required><br>
+        <label for="Aspartate_Aminotransferase">Aspartate Aminotransferase:</label>
+        <input type="text" id="Aspartate_Aminotransferase" name="Aspartate_Aminotransferase" required><br>
+        <label for="Total_Proteins">Total Proteins:</label>
+        <input type="text" id="Total_Proteins" name="Total_Proteins" required><br>
+        <label for="Albumin">Albumin:</label>
+        <input type="text" id="Albumin" name="Albumin" required><br>
+        <label for="Albumin_and_Globulin_Ratio">Albumin and Globulin Ratio:</label>
+        <input type="text" id="Albumin_and_Globulin_Ratio" name="Albumin_and_Globulin_Ratio" required><br><br>
+        <input type="submit" value="Liver Disease Test Result">
+    </form>
+
+    {% if diagnosis %}
+    <h2>{{ diagnosis }}</h2>
+    {% endif %}
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>

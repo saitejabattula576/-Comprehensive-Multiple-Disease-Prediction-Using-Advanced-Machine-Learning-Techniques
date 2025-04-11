@@ -1,0 +1,120 @@
+/* Reset some default styles for consistency */
+body, h1, form, label, input, a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Styling the body for a clean background */
+body {
+    background: linear-gradient(135deg, #ffcc70, #c850c0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container to center the content and add padding */
+form {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Heading styling */
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+label {
+    display: block;
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+/* Input field styling */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Input field focus effect */
+input[type="text"]:focus {
+    border-color: #a50d73;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    background-color: #0d2ba5;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Submit button hover effect */
+input[type="submit"]:hover {
+    background-color: #0f0b8e;
+    transform: translateY(-2px);
+}
+
+/* Diagnosis result styling */
+h2 {
+    color: #0d17a5;
+    margin-top: 20px;
+}
+
+/* Back to Home link styling */
+a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #555555;
+    font-size: 14px;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+/* Hover effect for Back to Home link */
+a:hover {
+    border-color: #0d29a5;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 480px) {
+    form {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input[type="submit"] {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    a {
+        font-size: 12px;
+    }
+}
